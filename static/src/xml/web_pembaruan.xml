@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    <!-- Add you code here -->
+    <template id="pembaruan" name="Pembaruan">
+      <t t-call="website.layout">
+        <div id="wrap" class="oe_structure oe_empty pt-5">
+          <div class="container">
+            <div class="alert alert-danger" role="alert">
+              <span>
+                <t t-esc="alasan"/>
+              </span>
+            </div>
+            <form role="form" action="/update/pendaftaran" method="POST" enctype="multipart/form-data">
+              <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+              <input type="hidden" name="uuid" t-att-value="uuid"/>
+              <div class="row s_col_no_bgcolor s_website_form_rows">
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                  <label class="s_website_form_label" style="width: 200px" for="j3xrp7t59ss">
+                    <span class="s_website_form_label_content">Nama Lengkap</span>
+                    <span class="s_website_form_mark">*</span>
+                  </label>
+                  <input type="text" class="form-control s_website_form_input" name="nama" required="1" t-att-value="data.nama" placeholder="Nama Lengkap" id="j3xrp7t59ss"/>
+                  <!-- <input type="text" class="form-control s_website_form_input" name="nama" required="1"/> -->
+                </div>
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                  <label class="s_website_form_label" style="width: 200px" for="pasar">
+                    <span class="s_website_form_label_content">Pasar</span>
+                    <span class="s_website_form_mark">*</span>
+                  </label>
+                  <select class="form-control s_website_form_input" name="pasar_id" id="pasar_id" style="" required="1" >
+                    <t t-foreach="pasar" t-as="i">
+                      <t t-if="data.pasar_id.id == i.id">
+                        <option t-esc="i.name" t-att-value="i.id" selected="selected"/>
+                      </t>
+                      <t t-if="data.pasar_id.id != i.id">
+                        <option t-esc="i.name" t-att-value="i.id" />
+                      </t>
+                    </t>
+                  </select>
+                </div>
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 900px" for="zsaw4nj4i5d">
+                      <H2>Identitas Sesuai KTP</H2>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 form-group s_website_form_field s_website_form_model_required" data-type="char" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="q08czy11z8f">
+                      <span class="s_website_form_label_content">NIK</span>
+                      <span class="s_website_form_mark">*</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="nik" required="true" t-att-value="data.nik" placeholder="NIK" id="q08czy11z8f"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="miavi4v53oq">
+                      <span class="s_website_form_label_content">Nomer KK</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="nomor_kk" t-att-value="data.nomor_kk" placeholder="Nomer KK" id="miavi4v53oq"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="olvj1yjmarg">
+                      <span class="s_website_form_label_content">Jenis Kelamin</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="jenis_kelamin" id="olvj1yjmarg" style="">
+                        <t t-if="data.jenis_kelamin == 'pria'">
+                        <option value="pria" selected="selected">Pria</option>
+                        <option value="wanita">Wanita</option>
+                        </t>
+                        <t t-if="data.jenis_kelamin != 'pria'">
+                        <option value="pria">Pria</option>
+                        <option value="wanita" selected="selected">Wanita</option>
+                        </t>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="tg_kota_lahir">Tempat, Tanggal Lahir</label>
+                    <div class="col-sm">
+                      <div class="row" style="margin:0px">
+                        <select class="form-control s_website_form_input col-sm-7" name="tmp_lahir" id="tmp_lahir" style="">
+                          <t t-foreach="kota_lahir" t-as="i">
+                            <t t-if="data.tmp_lahir.id == i.id">
+                              <option t-esc="i.name" t-att-value="i.id" selected="selected"/>
+                            </t>
+                            <t t-if="data.tmp_lahir.id != i.id">
+                              <option t-esc="i.name" t-att-value="i.id" />
+                            </t>
+                          </t>
+                        </select>
+                        <input type="date" class="form-control s_website_form_input col-sm-5" t-att-value="data.tgl_lahir" name="tgl_lahir" required="true" placeholder="" id="tanggal_lahir"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="udrgv3wvpv">
+                      <span class="s_website_form_label_content">Pekerjaan</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="pekerjaan" t-att-value="data.pekerjaan" placeholder="Pekerjaan" id="udrgv3wvpv"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-12 s_website_form_custom   " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ktp_alamat">
+                      <span class="s_website_form_label_content">Alamat Sesuai KTP</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="ktp_alamat" t-att-value="data.ktp_alamat" placeholder="Alamat Sesuai KTP" id="ktp_alamat"/>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="col-12 col-lg-6 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">-->
+<!--                  <div class="row s_col_no_bgcolor s_col_no_resize">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="ktp_rt_rw">-->
+<!--                      <span class="s_website_form_label_content">RT / RW</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <input type="text" class="form-control s_website_form_input" name="ktp_rt_rw" t-att-value="data.ktp_rt_rw" placeholder="RT / Rw" id="ktp_rt_rw"/>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom" data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ktp_propinsi_id">-->
+<!--                      <span class="s_website_form_label_content">Propinsi</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="ktp_propinsi_id" id="ktp_propinsi_id" style="">-->
+<!--                        <t t-foreach="propinsi" t-as="i">-->
+<!--                          <t t-if="data.ktp_propinsi_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="data.ktp_propinsi_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" />-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ktp_kota_id">-->
+<!--                      <span class="s_website_form_label_content">Kabupaten/Kota</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="ktp_kota_id" id="ktp_kota_id" onchange="filter_kota(this);" style="">-->
+<!--                        <t t-foreach="kota" t-as="i">-->
+<!--                          <t t-if="data.ktp_kota_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected" t-att-data_parent="i.propinsi_id.id"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="data.ktp_kota_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" t-att-data_parent="i.propinsi_id.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ktp_kecamatan_id" >-->
+<!--                      <span class="s_website_form_label_content">Kecamatan</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="ktp_kecamatan_id" id="ktp_kecamatan_id" style="" onchange="changeKecamatan();">-->
+<!--                        <t t-foreach="kecamatan" t-as="i">-->
+<!--                          <t t-if="data.ktp_kecamatan_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected" t-att-data_parent="i.kota_id.id"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="data.ktp_kecamatan_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" t-att-data_parent="i.kota_id.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="char" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ktp_desa_id">-->
+<!--                      <span class="s_website_form_label_content">Desa/Kelurahan</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="ktp_desa_id" id="ktp_desa_id" style="">-->
+<!--                        <t t-foreach="desa" t-as="i">-->
+<!--                          <t t-if="data.ktp_desa_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected" t-att-data_parent="i.kecamatan_id.id"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="data.ktp_desa_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" t-att-data_parent="i.kecamatan_id.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="integer" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="61a2pjh7zx9">
+                      <span class="s_website_form_label_content">Phone</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="phone" t-att-value="data.phone" step="1" placeholder="Phone" id="61a2pjh7zx9"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="integer" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="61a2pjh7zx9">
+                      <span class="s_website_form_label_content">Mobile</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="mobile" t-att-value="data.mobile" step="1" placeholder="Mobile" id="61a2pjh7zx9"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 form-group s_website_form_field s_website_form_model_required" data-type="email" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="su0tt1xtsko">
+                      <span class="s_website_form_label_content">Email</span>
+                      <span class="s_website_form_mark"> *                    </span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="email" class="form-control s_website_form_input" name="email" t-att-value="data.email" id="su0tt1xtsko" placeholder="Email"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="sesuai">
+                      <span class="s_website_form_label_content">Tempat Tinggal</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="tg_sesuai_ktp" id="sesuai" onchange="changeFunc(this);" style="">
+                        <t t-if="data.tg_sesuai_ktp == '0'">
+                          <option value="0" selected="selected">Tidak Sesuai KTP</option>
+                          <option value="1" >Sesuai KTP</option>
+                        </t>
+                        <t t-if="data.tg_sesuai_ktp == '1'">
+                          <option value="0">Tidak Sesuai KTP</option>
+                          <option value="1" selected="selected">Sesuai KTP</option>
+                        </t>
+                        <t t-if="not data.tg_sesuai_ktp">
+                          <option value="0">Tidak Sesuai KTP</option>
+                          <option value="1">Sesuai KTP</option>
+                        </t>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="lbs7slyastd">
+                      <span class="s_website_form_label_content">Jenis Jualan</span>
+                    </label>
+                    <div class="col-sm">
+                      <select class="form-control s_website_form_input" name="jenis_jualan_id" id="lbs7slyastd" style="">
+                        <t t-foreach="jenis_jualan" t-as="i">
+                          <t t-if="data.jenis_jualan_id.id == i.id">
+                            <option t-esc="i.name" t-att-value="i.id" selected="selected"/>
+                          </t>
+                          <t t-if="data.jenis_jualan_id.id != i.id">
+                            <option t-esc="i.name" t-att-value="i.id"/>
+                          </t>
+                        </t>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="char" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="ket_jualan">
+                      <span class="s_website_form_label_content">Keterangan</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="ket_jualan" t-att-value="data.ket_jualan" placeholder="Keterangan" id="ket_jualan"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="div" class="row s_col_no_bgcolor s_website_form_rows">
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 900px" for="zsaw4nj4i5d">
+                      <h2>Identitas Domisili</h2>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="tg_street">Alamat</label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control s_website_form_input" name="tg_street" t-att-value="tg_street" placeholder="Nama Jalan" id="tg_street"/>
+                    </div>
+                  </div>
+                </div>
+<!--                <div class="col-12 col-lg-6 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">-->
+<!--                  <div class="row s_col_no_bgcolor s_col_no_resize">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="tg_street2">RT / RW</label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <input type="text" class="form-control s_website_form_input" name="tg_street2" t-att-value="tg_street2" placeholder="RT / RW" id="tg_street2"/>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="tg_propinsi_id">Propinsi</label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="tg_propinsi_id" id="tg_propinsi_id" style="">-->
+<!--                        <t t-foreach="propinsi" t-as="i">-->
+<!--                          <t t-if="tg_propinsi_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="tg_propinsi_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="tg_kota_id">Kabupaten / Kota</label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="tg_kota_id" id="tg_kota_id" style="">-->
+<!--                        <t t-foreach="kota" t-as="i">-->
+<!--                          <t t-if="tg_kota_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="tg_kota_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="many2one" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="tg_kecamatan_id">-->
+<!--                      <span class="s_website_form_label_content">Kecamatan</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="tg_kecamatan_id" id="tg_kecamatan_id" onchange="changeKecamatan2();">-->
+<!--                        <t t-foreach="kecamatan" t-as="i">-->
+<!--                          <t t-if="tg_kecamatan_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected" t-att-data_parent="i.kota_id.id"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="tg_kecamatan_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" t-att-data_parent="i.kota_id.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <div class="form-group s_website_form_field col-12 col-lg-6 s_website_form_custom   " data-type="char" data-name="Field">-->
+<!--                  <div class="row s_col_no_resize s_col_no_bgcolor">-->
+<!--                    <label class="col-form-label col-sm-auto s_website_form_label " style="width: 200px" for="tg_desa_id">-->
+<!--                      <span class="s_website_form_label_content">Desa/Kelurahan</span>-->
+<!--                    </label>-->
+<!--                    <div class="col-sm">-->
+<!--                      <select class="form-control s_website_form_input" name="tg_desa_id" id="tg_desa_id" style="">-->
+<!--                        <t t-foreach="desa" t-as="i">-->
+<!--                          <t t-if="tg_desa_id.id == i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" selected="selected" t-att-data_parent="i.kecamatan_id.id"/>-->
+<!--                          </t>-->
+<!--                          <t t-if="tg_desa_id.id != i.id">-->
+<!--                            <option t-esc="i.name" t-att-value="i.id" t-att-data_parent="i.kecamatan_id.id"/>-->
+<!--                          </t>-->
+<!--                        </t>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+              </div> 
+              <div class="row s_col_no_bgcolor s_website_form_rows">
+                <div class="col-12 col-lg-12 form-group s_website_form_custom s_website_form_field" data-type="char" data-name="Field">
+                  <div class="row s_col_no_bgcolor s_col_no_resize">
+                    <label class="col-form-label col-sm-auto s_website_form_label" style="width: 900px" for="zsaw4nj4i5d">
+                      <h2>Dokumen Pendukung</h2>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-4" data-type="binary" data-name="Field">
+                  <label class="s_website_form_label " style="width: 200px" for="c4e966mxrws">
+                    <span class="s_website_form_label_content">Foto KTP</span>
+                  </label>
+                  <input type="file" class="form-control-file s_website_form_input" t-att-value="data.foto_ktp" name="foto_ktp" id="c4e966mxrws" accept="image/*"/>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-4" data-type="binary" data-name="Field">
+                  <label class="s_website_form_label " style="width: 200px" for="262nk3edc5z">
+                    <span class="s_website_form_label_content">Foto KK</span>
+                  </label>
+                  <input type="file" class="form-control-file s_website_form_input" t-att-value="data.foto_kk" name="foto_kk" id="262nk3edc5z" accept="image/*"/>
+                </div>
+                <div class="form-group s_website_form_field col-12 s_website_form_custom col-lg-4" data-type="binary" data-name="Field">
+                  <label class="s_website_form_label " style="width: 200px" for="pas_foto">
+                    <span class="s_website_form_label_content">Pas Foto</span>
+                  </label>
+                  <input type="file" class="form-control-file s_website_form_input" t-att-value="data.pas_foto" name="pas_foto" id="pas_foto" accept="image/*"/>
+                </div>
+              </div>
+              <div class="row s_col_no_bgcolor s_website_form_rows">
+                <div class="col-12 form-group s_website_form_submit" data-name="Submit Button">
+                  <div style="width: 200px;" class="s_website_form_label"/>
+                  <button role="button" class="btn btn-lg btn-primary s_website_form_send" data-original-title="" title="" aria-describedby="tooltip989365">Submit
+                  </button>
+                  <span id="s_website_form_result"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </t>
+    </template>
+  </data>
+</odoo>
