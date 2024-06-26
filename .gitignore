@@ -162,5 +162,13 @@ cython_debug/
 #.idea/
 .vscode/
 
-__pycache__
+odoo.conf
+etc
+requirements.txt
+docker-compose.yml
+entrypoint.sh
+README.md
+run.sh
+.vscode
 .__pycache__
+__pycache__
