@@ -29,6 +29,9 @@
         'static/src/xml/web_pendaftaran.xml',
         'static/src/xml/web_pembaruan.xml',
         'static/src/xml/web_denah.xml',
+        'static/src/xml/web_pasarbarulamongan.xml',
+        'static/src/xml/web_pasarbabat.xml',
+        'static/src/xml/web_pasaragrobisbabat.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -39,6 +42,10 @@
         'static/src/xml/web_pendaftaran.xml',
         'static/src/xml/web_pembaruan.xml',
         'static/src/xml/web_denah.xml',
+        'static/src/xml/web_pasarbarulamongan.xml',
+        'static/src/xml/web_pasarbabat.xml',
+        'static/src/xml/web_pasaragrobisbabat.xml',
+
     ],
     'images': [
         'images/bg_1.jpg'
@@ -125,7 +132,6 @@
         '/web_simpasar/static/src/xml/scss/bootstrap/utilities',
         '/web_simpasar/static/src/xml/scss/bootstrap/mixins',
     ],
-
     'installable': True,
     'auto_install': False,
     'application': False,

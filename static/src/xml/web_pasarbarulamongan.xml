@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+       <record id="pasarbarulamongan_menu" model="website.menu">
+           <field name="name">Pasar Baru Lamongan</field>
+           <field name="url">/pasarbarulamongan</field>
+           <field name="parent_id" ref="website.main_menu"/>
+           <field name="sequence" type="int">50</field>
+       </record>
+
+        <template id="pasarbarulamongan_template" name="pasarbarulamongan">
+		    <t t-call="website.layout">
+		         <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="position: relative;">
+		                <span class="s_parallax_bg oe_img_bg" style="background-image: url(&quot;/pasar/static/img/banner.jpg&quot;); background-position: 50% 0px;"
+		                      data-original-id="1413" data-original-src="/pasar/static/img/banner.jpg" data-mimetype="image/jpeg" data-resize-width="1920" />
+		                <div class="o_we_bg_filter bg-black-50" />
+		                <div class="s_allow_columns container">
+		                    <h1 style="text-align: center;">
+		                        <font style="font-size: 48px; font-weight: bold;">Selamat Datang Di Pasar Lamongan</font>
+		                    </h1>
+		                    <p dir="auto" data-pm-slice="1 1 []" style="text-align: center; ">
+		                        <font style="font-size: 18px;">Jl. Jend. A. Yani, Tumenggungan, Kec. Lamongan, Kabupaten Lamongan, Jawa Timur 62214</font>
+		                    </p>
+		                    <p style="text-align: center;">
+		                        <br />
+		                    </p>
+		                </div>
+		                <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable" href="#" title="Scroll down to next section">
+		                    <i class="fa fa-angle-down fa-3x" />
+		                </a>
+		            </section>
+		            <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_text_image" data-name="Text - Image" style="position: relative;">
+						<div class="container">
+		                    <div class="row align-items-center">
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+									<img src="https://bangsaonline.com/images/uploads/berita/700/a519ad0d6c9ab3c415d4f0537ef1764b.jpg" alt="PASAR BARU LAMONGAN" class="img-fluid" />
+        						</div>
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+		                            <h2>PASAR BARU LAMONGAN</h2>
+		                            <p dir="auto" data-pm-slice="1 1 []">Salah satu pasar yang ada di Kabupaten Lamongan. Pasar tradisional ini menjual berbagai produk kebutuhan pokok dan sembako seperti seperti mencari beras Kabupaten Lamongan, terigu, gula, garam, sayur mayur, bawang, cabe, ikan, ayam, dan lainnya. Kelebihan pasar jenis tradisional ini adalah produk-produk yang ada di jual dengan harga rakyat, sehingga harganya murah bagi masyarakat, sebagaimana fungsi pasar pada umumnya.</p>
+		                            
+		                        </div>
+		                    </div>
+		                </div>
+                    </section>
+                    <section class="s_media_list pt32 pb32 o_cc o_cc5 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;">
+                    <div class="container">
+                        <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://cdn1-production-images-kly.akamaized.net/yV07Ivm7btlazW3P00yfled4Bww=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/2950344/original/082736400_1572078210-Pasar_Modern.jpg" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="548" data-original-src="/web/image/548-4ea2357e/website.s_media_list_default_image_1" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Kios Modern</h3>
+                                        <p class="o_default_snippet_text">
+                                            Terdapat lebih dari 120 kios yang menjual atau menyediakan bahan sesuai kebutuhan pelanggan,
+                                            Menawarkan ruang yang cukup untuk menampilkan produk dengan rapi. Beberapa kios dilengkapi dengan fasilitas pembayaran digital, seperti QR code atau mesin EDC (Electronic Data Capture).
+                                            Pelayanan yang ramah dan profesional.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center flex-row-reverse o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://micms.mediaindonesia.com/storage/app/media/FOTO/Operator/19-PIK.jpg" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="549" data-original-src="/web/image/549-b7ebf7d8/website.s_media_list_default_image_2" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Tempat Bersih dan Nyaman</h3>
+                                        <p class="o_default_snippet_text">
+                                            Area pasar secara rutin dibersihkan, termasuk lantai, kios, dan tempat sampah yang disediakan di berbagai titik.
+                                            Pengelolaan sampah yang baik dengan pengangkutan sampah secara berkala untuk menghindari penumpukan dan bau tidak sedap.
+                                            Setiap kios memiliki tempat penyimpanan yang bersih dan produk-produk ditampilkan dengan menarik.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://titipku.com/blog/wp-content/uploads/2022/04/Foto-Freshmarket-PIK-05578-1024x576.jpg" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="550" data-original-src="/web/image/550-640b79f4/website.s_media_list_default_image_3" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Produk Terstandarisasi</h3>
+                                        <p class="o_default_snippet_text">
+                                            Produk terstandarisasi di pasar modern adalah barang-barang yang telah melalui proses pengawasan ketat untuk memenuhi standar kualitas tertentu, seperti SNI (Standar Nasional Indonesia) atau standar internasional lainnya.
+                                            Produk dikemas secara profesional, biasanya dengan label yang jelas mencantumkan informasi seperti merek, tanggal produksi, tanggal kedaluwarsa, komposisi, dan nilai gizi.
+                                            Pengemasan dirancang untuk menjaga kebersihan dan keawetan produk, melindunginya dari kontaminasi dan kerusakan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+		    </t>
+		 </template>
+    </data>
+</odoo>

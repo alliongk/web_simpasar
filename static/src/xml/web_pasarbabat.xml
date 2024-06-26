@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Add you code here -->
+       <record id="pasarbabat_menu" model="website.menu">
+           <field name="name">Pasar Babat Lamongan</field>
+           <field name="url">/pasarbabat</field>
+           <field name="parent_id" ref="website.main_menu"/>
+           <field name="sequence" type="int">50</field>
+       </record>
+
+        <template id="pasarbabat_template" name="pasarbabat">
+		    <t t-call="website.layout">
+		         <div id="wrap" class="oe_structure oe_empty">
+		            <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="position: relative;">
+		                <span class="s_parallax_bg oe_img_bg" style="background-image: url(&quot;/pasar/static/img/banner.jpg&quot;); background-position: 50% 0px;"
+		                      data-original-id="1413" data-original-src="/pasar/static/img/banner.jpg" data-mimetype="image/jpeg" data-resize-width="1920" />
+		                <div class="o_we_bg_filter bg-black-50" />
+		                <div class="s_allow_columns container">
+		                    <h1 style="text-align: center;">
+		                        <font style="font-size: 48px; font-weight: bold;">Selamat Datang Di Pasar Babat Lamongan</font>
+		                    </h1>
+		                    <p dir="auto" data-pm-slice="1 1 []" style="text-align: center; ">
+		                        <font style="font-size: 18px;">Jl. Raya Babat - Bojonegoro, Banaran, Babat, Kec. Lamongan, Kabupaten Lamongan, Jawa Timur 62271</font>
+		                    </p>
+		                    <p style="text-align: center;">
+		                        <br />
+		                    </p>
+		                </div>
+		                <a class="o_scroll_button mb-3 rounded-circle align-items-center justify-content-center mx-auto bg-primary o_not_editable" href="#" title="Scroll down to next section">
+		                    <i class="fa fa-angle-down fa-3x" />
+		                </a>
+		            </section>
+		            <section class="s_text_image pt32 pb32 o_colored_level" data-snippet="s_text_image" data-name="Text - Image" style="position: relative;">
+						<div class="container">
+		                    <div class="row align-items-center">
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+									<img src="https://lh3.googleusercontent.com/p/AF1QipMGP1R7yjBz-V2nBkuXsro2UlmCxFmTj5o6VXD_=s1360-w1360-h1020" alt="PASAR BARU LAMONGAN" class="img-fluid" />
+        						</div>
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+		                            <h2>PASAR BABAT LAMONGAN</h2>
+		                            <p dir="auto" data-pm-slice="1 1 []">
+                                        Pasar Babat adalah sebuah pasar tradisional yang dikenal luas di wilayah Lamongan, Jawa Timur. Pasar ini memiliki lokasi yang sangat strategis, terletak di persimpangan jalur antara Surabaya – Cepu, Bojonegoro, dan Jombang – Tuban. Letak strategis ini menjadikan Pasar Babat sebagai pusat aktivitas perdagangan yang ramai dan penting di kawasan tersebut.
+                                    </p>
+		                        </div>
+		                    </div>
+		                </div>
+                    </section>
+                    <section class="s_media_list pt32 pb32 o_cc o_cc5 o_colored_level" data-vcss="001" data-snippet="s_media_list" data-name="Media List" style="background-image: none;">
+                    <div class="container">
+                        <div class="row s_nb_column_fixed s_col_no_bgcolor">
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://o-cdn-cas.sirclocdn.com/parenting/images/pasar_modern_jakarta.width-800.format-webp.webp" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="548" data-original-src="/web/image/548-4ea2357e/website.s_media_list_default_image_1" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Kios Modern atau Los Modern</h3>
+                                        <p class="o_default_snippet_text">
+                                            Terdapat total 947 kios dan 946 los di dalam pasar, yang menjual beragam produk, mulai dari bahan pangan seperti sayur-mayur, buah-buahan, daging, dan ikan, hingga kebutuhan sehari-hari seperti sembako, pakaian, dan peralatan rumah tangga. Beberapa kios dilengkapi dengan fasilitas pembayaran digital, seperti QR code atau mesin EDC (Electronic Data Capture), untuk memudahkan transaksi. Selain itu, para pedagang di Pasar Babat dikenal dengan pelayanan yang ramah dan profesional, menciptakan suasana belanja yang nyaman bagi para pelanggan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center flex-row-reverse o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://micms.mediaindonesia.com/storage/app/media/FOTO/Operator/19-PIK.jpg" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="549" data-original-src="/web/image/549-b7ebf7d8/website.s_media_list_default_image_2" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Tempat Bersih dan Nyaman</h3>
+                                        <p class="o_default_snippet_text">
+                                            Area pasar secara rutin dibersihkan, termasuk lantai, kios, dan tempat sampah yang disediakan di berbagai titik.
+                                            Pengelolaan sampah yang baik dengan pengangkutan sampah secara berkala untuk menghindari penumpukan dan bau tidak sedap.
+                                            Setiap kios memiliki tempat penyimpanan yang bersih dan produk-produk ditampilkan dengan menarik.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 s_media_list_item pt16 pb16" data-name="Media item">
+                                <div class="row s_col_no_resize s_col_no_bgcolor g-0 align-items-center o_colored_level">
+                                    <div class="align-self-stretch s_media_list_img_wrapper col-lg-6">
+                                        <img src="https://beritausaha.com/wp-content/uploads/2022/05/alex-hudson-m3I92SgM3Mk-unsplash-1-1024x683.jpg" class="s_media_list_img h-100 w-100" alt="" loading="lazy" data-original-id="550" data-original-src="/web/image/550-640b79f4/website.s_media_list_default_image_3" data-mimetype="image/jpeg"/>
+                                    </div>
+                                    <div class="s_media_list_body col-lg-6">
+                                        <h3 class="o_default_snippet_text">Beragam macam kebutuhan pangan dan keperluan</h3>
+                                        <p class="o_default_snippet_text">
+                                            Produk-produk yang dijual di pasar modern sering kali sudah terstandarisasi dan dikemas dengan baik, termasuk bahan pangan segar seperti sayur-mayur, buah-buahan, daging, dan ikan, serta produk olahan seperti roti, susu, dan makanan beku. Pasar modern juga menyediakan kebutuhan rumah tangga lainnya, seperti peralatan kebersihan, pakaian, dan elektronik. Fasilitas pembayaran digital, seperti kartu kredit, debit, dan QR code, tersedia untuk kenyamanan transaksi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+		        </div>
+		    </t>
+		</template>
+
+
+
+    </data>
+</odoo>
