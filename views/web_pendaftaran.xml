@@ -2,12 +2,12 @@
 <odoo>
   <data>
     <!-- Add you code here -->
-    <!-- <record id="form_pendaftaran" model="website.menu">
+    <record id="form_pendaftaran" model="website.menu">
       <field name="name">Pendaftaran</field>
       <field name="url">/pendaftaran</field>
       <field name="parent_id" ref="website.main_menu"/>
       <field name="sequence" type="int">30</field>
-    </record> -->
+    </record>
     <template id="pendaftaran" name="pendaftaran">
       <t t-call="website.layout">
         <div id="wrap" class="oe_structure oe_empty pt-5">

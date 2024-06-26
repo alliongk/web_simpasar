@@ -26,12 +26,14 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/web_home.xml',
-        'views/web_navbar.xml',
         'views/web_pendaftaran.xml',
         'views/web_pembaruan.xml',
         'views/web_denah.xml',
         'views/web_visimisi.xml',
         'views/web_infokomoditas.xml',
+        'views/web_pasaragrobisbabat.xml',
+        'views/web_pasarbabat.xml',
+        'views/web_pasarbarulamongan.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

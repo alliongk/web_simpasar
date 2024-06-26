@@ -1,15 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
-        <!-- Add you code here -->
-       <!-- <record id="home" model="website.menu">
-           <field name="name">home</field>
-           <field name="url">/</field>
-           <field name="parent_id" ref="website.main_menu"/>
-           <field name="sequence" type="int">10</field>
-       </record> -->
-
-        <template id="home" name="home">
+        <template id="home_template" name="home">
 		    <t t-call="website.layout">
 		        <t t-set="pageName" t-value="'homepage'" />
 		        <div id="wrap" class="oe_structure oe_empty">
@@ -39,7 +31,7 @@
 		                            <h2>REVITALISASI PASAR TRADISIONAL</h2>
 		                            <p dir="auto" data-pm-slice="1 1 []">Revitalisasi pasar tradisional merupakan proses yang mengasyikkan sekaligus menantang bagi mereka yang terlibat. Ini akan membutuhkan perencanaan yang cermat, pelaksanaan yang bijaksana, dan kolaborasi dengan pemangku kepentingan lainnya agar berhasil.</p>
 		                            <p>
-		                                <a href="#" class="mb-2 btn btn-primary" data-original-title="" title="" aria-describedby="tooltip499371" target="_blank">Learn more</a>
+		                                <a href="#" class="mb-2 btn btn-primary" data-original-title="" title="" aria-describedby="tooltip499371" target="_blank">Info Lebih Lanjut</a>
 		                            </p>
 		                        </div>
 		                        <div class="col-lg-6 pt16 pb16 o_colored_level" style="">
@@ -48,6 +40,48 @@
 		                                <div class="media_iframe_video_size">&amp;nbsp;</div>
 		                                <iframe src="//www.youtube.com/embed/SAoqrtZLjZ8?autoplay=0&amp;rel=0&amp;controls=0&amp;modestbranding=1" frameborder="0" allowfullscreen="allowfullscreen" />
 		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+						<div class="container">
+		                    <div class="row align-items-center">
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+									<img src="https://bangsaonline.com/images/uploads/berita/700/a519ad0d6c9ab3c415d4f0537ef1764b.jpg" alt="PASAR BARU LAMONGAN" class="img-fluid" />
+        						</div>
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+		                            <h2>PASAR BARU LAMONGAN</h2>
+		                            <p dir="auto" data-pm-slice="1 1 []">Salah satu pasar yang ada di Kabupaten Lamongan. Pasar tradisional ini menjual berbagai produk kebutuhan pokok dan sembako seperti seperti mencari beras Kabupaten Lamongan, terigu, gula, garam, sayur mayur, bawang, cabe, ikan, ayam, dan lainnya. Kelebihan pasar jenis tradisional ini adalah produk-produk yang ada di jual dengan harga rakyat, sehingga harganya murah bagi masyarakat, sebagaimana fungsi pasar pada umumnya.</p>
+		                            <p>
+		                                <a href="/pasarbarulamongan" class="mb-2 btn btn-primary" data-original-title="" title="" aria-describedby="tooltip499371">Info Lebih Lanjut</a>
+		                            </p>
+		                        </div>
+		                    </div>
+		                </div>
+						<div class="container">
+		                    <div class="row align-items-center">
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+									<img src="https://lh3.googleusercontent.com/p/AF1QipMGP1R7yjBz-V2nBkuXsro2UlmCxFmTj5o6VXD_=s1360-w1360-h1020" alt="PASAR BARU LAMONGAN" class="img-fluid" />
+        						</div>
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+		                            <h2>PASAR BABAT</h2>
+		                            <p dir="auto" data-pm-slice="1 1 []">Pasar Babat merupakan pasar tradisional yang memiliki letak strategis berada di persimpangan jalur antara Surabaya – Cepu, Bojonegoro dan Jombang – Tuban. </p>
+									<p>
+		                                <a href="/pasarbabat" class="mb-2 btn btn-primary" data-original-title="" title="" aria-describedby="tooltip499371">Info Lebih Lanjut</a>
+		                            </p>
+		                        </div>
+		                    </div>
+		                </div>
+						<div class="container">
+		                    <div class="row align-items-center">
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+									<img src="https://asset-2.tstatic.net/surabaya/foto/bank/images/sidak-harga-sembako-di-pasar-lamongan.jpg" alt="PASAR BARU LAMONGAN" class="img-fluid" />
+        						</div>
+		                        <div class="col-lg-6 pt16 pb16 o_colored_level">
+		                            <h2>PASAR AGROBIS BABAT</h2>
+		                            <p dir="auto" data-pm-slice="1 1 []">Tujuan pembangunan Pasar Tradisional Agrobis Babat di kawasan Perkotaan Babat adalah sebagai kawasan perdagangan dan jasa skala kabupaten. Namun, kualitas pelayanan pasar yang diberikan masih rendah. Oleh karena itu, tujuan dalam penelitian ini yaitu mengetahui tingkat kualitas pelayanan Pasar Agrobis Babat.</p>
+									<p>
+		                                <a href="/pasaragrobisbabat" class="mb-2 btn btn-primary" data-original-title="" title="" aria-describedby="tooltip499371">Info Lebih Lanjut</a>
+		                            </p>
 		                        </div>
 		                    </div>
 		                </div>
@@ -64,17 +98,13 @@
 		                    <div class="row d-flex align-items-stretch">
 		                        <div class="col-lg-4 s_col_no_bgcolor pb0 pt0">
 		                            <div class="card bg-white h-100">
-		                                <img class="img-fluid o_we_custom_image" src="/pasar/static/img/01.jpg" alt="" data-original-id="1520" data-original-src="/pasar/static/img/01.jpg"
-		                                     data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip867556" style="width: 50%; transform: translateX(43.7%) translateY(8.7%) scaleX(1.58) scaleY(1.36);" loading="lazy" />
+		                                <img class="card-img-top" src="/pasar/static/img/01.jpg" alt="" loading="lazy" data-original-title="" title="" aria-describedby="tooltip19706"
+		                                     data-original-id="1519" data-original-src="/pasar/static/img/02.jpg" data-mimetype="image/jpeg" data-resize-width="690" style="" />
 		                                <br />
 		                                <div class="card-body">
-		                                    <h3 class="card-title">
-		                                        <br />
-		                                    </h3>
 		                                    <h3 class="card-title">Sekolah Pedagang</h3>
 		                                    <p class="card-text">
-		                                        <span style="color: rgb(81, 81, 81); font-family: heebo, sans-serif; font-size: 16px; letter-spacing: -0.112px; background-color: rgb(233, 236, 239);">Dalam Sepasar Pedas, pedagang-pedagang pasar dibentuk untuk memiliki kompetensi marketing, daya saing tinggi, dan berperilaku baik dalam menghadapi era pasar bebas dan memperluas jaringan bisnis sehingga mampu bersaing dengan kompetitornya.</span>
-		                                        <br />
+		                                       Dalam Sepasar Pedas, pedagang-pedagang pasar dibentuk untuk memiliki kompetensi marketing, daya saing tinggi, dan berperilaku baik dalam menghadapi era pasar bebas dan memperluas jaringan bisnis sehingga mampu bersaing dengan kompetitornya.
 		                                    </p>
 		                                </div>
 		                            </div>
@@ -144,43 +174,8 @@
 		                    </div>
 		                </div>
 		            </section>
-		            <section class="s_company_team o_colored_level pb0 pt0" data-snippet="s_company_team" data-name="Team" style="">
-		                <div class="container">
-		                    <div class="row s_nb_column_fixed">
-		                        <div class="col-lg-6 pt24 pb24 o_colored_level" style="">
-		                            <div class="row s_col_no_resize s_col_no_bgcolor">
-		                                <div class="col-lg-4 pb16 o_not_editable">
-		                                    <img alt="" src="/web/image/1530-9872c0e9/sutiaji.jpg" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-title="" title="" aria-describedby="tooltip975710" data-original-id="1493" data-original-src="/web/image/1493-91d77ee5/sutiaji.jpg" data-mimetype="image/jpeg" style="transform: scaleX(1.16) scaleY(1.15);" data-x="15.616438356164382" data-y="39.04109589041096" data-width="488.01369863013696" data-height="443.49315068493155" data-scale-x="1" data-scale-y="1" data-aspect-ratio="0/0" />
-		                                </div>
-		                                <div class="col-lg-8">
-		                                    <h4>H. Sutiaji (Walikota Malang)</h4>
-		                                    <p>
-		                                        <span style="color: rgb(81, 81, 81); font-family: heebo, sans-serif; font-size: 14px; letter-spacing: -0.112px;">"Jika salah satu indikator untuk meraih pasar berpredikat SNI adalah dengan pembangunan infrastruktur atau sarana prasarana pasar yang memadai, sehingga dilakukan revitalisasi. Namun, lebih dari itu, revitalisasi tak hanya dilakukan pada infrastruktur saja, melainkan juga pada revitalisasi SDM."</span>
-		                                        <br />
-		                                    </p>
-		                                </div>
-		                            </div>
-		                        </div>
-		                        <div class="col-lg-6 pt24 pb24 o_colored_level" style="">
-		                            <div class="row s_col_no_resize s_col_no_bgcolor">
-		                                <div class="col-lg-4 pb16 o_not_editable">
-		                                    <img alt="" src="/web/image/1548-e57a0433/sofyan%20edi.jpg" class="img-fluid rounded-circle mx-auto" loading="lazy" data-original-title="" title="" aria-describedby="tooltip975710" style="transform: scaleX(1.16) scaleY(1.15);" data-original-id="1547" data-original-src="/web/image/1547-65ad4abf/sofyan%20edi.jpg" data-mimetype="image/jpeg" data-resize-width="690" />
-		                                </div>
-		                                <div class="col-lg-8">
-		                                    <h4>Sofyan Edi ( WaWalikota Malang)</h4>
-		                                    <p>
-		                                        <span style="font-family: &quot;PT Serif&quot;, Georgia, serif; font-size: 14px; white-space: pre-wrap;">"Ini upaya hulu ke hilir agar UMKM bisa tumbuh. Meski sederhana, namun kita berupaya memberikan hal kecil yang diberikan untuk UMKM. Ini juga peran Pemkot Malang untuk membantu ekonomi masyarakat supaya bangkit kembali. Seiring dengan pemasaran digital yang jalan terus,"</span>
-		                                        <br />
-		                                    </p>
-		                                </div>
-		                            </div>
-		                        </div>
-		                    </div>
-		                </div>
-		            </section>
 		        </div>
 		    </t>
-		    <!-- </t> -->
 		</template>
 
 
