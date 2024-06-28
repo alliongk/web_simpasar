@@ -1,6 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
+<<<<<<< HEAD:static/src/xml/web_pasarbarulamongan.xml
+        <!-- Add you code here -->
+       <record id="pasarbarulamongan_menu" model="website.menu">
+           <field name="name">Pasar Baru Lamongan</field>
+           <field name="url">/pasarbarulamongan</field>
+           <field name="parent_id" ref="website.main_menu"/>
+           <field name="sequence" type="int">50</field>
+       </record>
+
+=======
+>>>>>>> main:views/web_pasarbarulamongan.xml
         <template id="pasarbarulamongan_template" name="pasarbarulamongan">
 		    <t t-call="website.layout">
 		         <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96 o_colored_level o_full_screen_height" data-scroll-background-ratio="1" data-snippet="s_cover" data-name="Cover" style="position: relative;">
