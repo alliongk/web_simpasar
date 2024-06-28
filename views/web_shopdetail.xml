@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- inherited Website view of the selectd Product Page -->
+    <template id="extended_product" inherit_id="website_sale.product" name="Extended Product">
+        <xpath expr="//div[@id='o_wsale_cta_wrapper']" position="replace">
+            <style>
+                .d-flex {
+                    display: none;
+                    overflow: hidden;
+                }
+            </style>
+        </xpath>
+        <xpath expr="//div[@id='o_product_terms_and_share']" position="inside">
+            <style>
+                .s_share {
+                    display: none;
+                    overflow: hidden;
+                }
+            </style>
+        </xpath>
+    </template>
+</odoo>
