@@ -1,5 +1,6 @@
 from odoo import http
 from odoo.http import request
+import json
 
 
 class blog(http.Controller):
@@ -19,3 +20,5 @@ class blog(http.Controller):
             'post': post,
         }
         return request.render('web_simpasar.blog_post_template', values)
+
+
