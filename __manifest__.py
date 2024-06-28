@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'pasar', 'website', 'web'],
+    'depends': ['base', 'pasar', 'website', 'web', 'website_blog'],
 
     # always loaded
     'data': [
@@ -34,6 +34,8 @@
         'views/web_pasaragrobisbabat.xml',
         'views/web_pasarbabat.xml',
         'views/web_pasarbarulamongan.xml',
+        'views/web_blog_page.xml',
+        'views/web_root.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -43,6 +45,8 @@
     'assets': {
         'web.assets_frontend': [
             '/pasar/static/src/js/main.js',
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css',
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js',
             '/web_simpasar/static/src/css/web_pendaftaran.css',
             '/web_simpasar/static/src/css/web_misi.css',
             '/web_simpasar/static/src/css/animasi.css',

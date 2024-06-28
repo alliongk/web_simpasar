@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <template id="blog_page_template" name="Blog Page">
+            <t t-call="website.layout">
+                <div class="container mt-5">
+                    <h1 class="text-center mb-4">Blog Page</h1>
+                    <div class="row">
+                        <t t-foreach="posts" t-as="post">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h2 class="card-title">
+                                            <a t-att-href="'/blog/' + slug(post)">
+                                                <t t-esc="post.name"/>
+                                            </a>
+                                        </h2>
+                                        <p class="card-text">
+                                            <t t-esc="post.subtitle"/>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <a t-att-href="'/blog/' + slug(post)" class="btn btn-primary">Baca Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+        <template id="blog_post_template" name="Blog Post">
+            <t t-call="website.layout">
+                <div class="container mt-5">
+                    <h1 class="text-center mb-4"><t t-esc="post.name"/></h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <p>
+                                <t t-raw="post.content"/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
