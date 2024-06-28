@@ -20,18 +20,22 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'pasar', 'website', 'web'],
+    'depends': ['base', 'pasar', 'website', 'web', 'website_blog'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'static/src/xml/web_home.xml',
-        'static/src/xml/web_pendaftaran.xml',
-        'static/src/xml/web_pembaruan.xml',
-        'static/src/xml/web_denah.xml',
-        'static/src/xml/web_pasarbarulamongan.xml',
-        'static/src/xml/web_pasarbabat.xml',
-        'static/src/xml/web_pasaragrobisbabat.xml',
+        'views/web_home.xml',
+        'views/web_pendaftaran.xml',
+        'views/web_pembaruan.xml',
+        'views/web_denah.xml',
+        'views/web_visimisi.xml',
+        'views/web_infokomoditas.xml',
+        'views/web_pasaragrobisbabat.xml',
+        'views/web_pasarbabat.xml',
+        'views/web_pasarbarulamongan.xml',
+        'views/web_blog_page.xml',
+        'views/web_root.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

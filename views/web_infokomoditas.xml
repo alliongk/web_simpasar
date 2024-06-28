@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+     <record id="web_infokomoditas" model="website.menu">
+            <field name="name">Info Komoditas</field>
+            <field name="url">/infokomoditas</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+        <template id="infokomoditas" name="Info Komoditas">
+            <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <h2>Info Komoditas
+                </h2>
+            </div>
+            </t>
+        </template>
+        
+    
+    </data>
+    
+
+</odoo>

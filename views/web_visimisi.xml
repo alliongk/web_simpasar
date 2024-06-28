@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="form_visimisi" model="website.menu">
+            <field name="name">Visi Misi</field>
+            <field name="url">/visimisi</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>
+
+        <template id="visimisi" name="Visi Misi">
+		    <t t-call="website.layout">
+		        <div id="wrap" class="oe_structure oe_empty">
+                    <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_cc5 o_colored_level" data-scroll-background-ratio="1" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Wavy/02_001&quot;,&quot;flip&quot;:[&quot;y&quot;]}" data-snippet="s_banner" data-name="Banner" style="background-image: none;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web_simpasar/static/src/img/pasarlamongan_bgd.jpg'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter" style="background-color: rgba(17, 13, 22, 0.85) !important;"/>
+                        <div class="o_we_shape o_web_editor_Wavy_02_001" style="background-image: url(&quot;/web_editor/shape/web_editor%2FWavy%2F02_001.svg?c3=%23142a2e&amp;flip=y&quot;); background-position: 50% 100%;"/>
+                        <div class="container">
+                            <div class="row s_nb_column_fixed">
+                                <div class="col-lg-6 jumbotron rounded pt32 pb32 o_colored_level" data-name="Box">
+                                    <h1 class="o_default_snippet_text animate__animated animate__bounce animate__infinite infinite">Pasar Rakyat Era Digital</h1>
+                        <p><br/></p>
+                                    <p class="lead o_default_snippet_text">Pasar tradisional tidak akan hilang sampai kapan pun, Jika mereka harus mengubah pendekatan mereka agar tetap relevan diera digital.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="s_text_image pt32 o_cc o_cc5 pb128 o_colored_level" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Wavy/04&quot;}" data-snippet="s_text_image" data-name="Text - Image" style="background-image: none;">
+                        <div class="o_we_shape o_web_editor_Wavy_04"/>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level animate__animated animate__slideInLeft">
+                                    <h2 class="o_default_snippet_text">VISI</h2>
+                                    <p><br/></p>
+                                    <p class="o_default_snippet_text">Menciptakan pasar yang bersih, aman, tertib, dan menguntungkan SERTA sebagai penggerak roda  perekonomian  Kabupaten Lamongan.</p>
+                                </div>
+                                <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level animate__animated animate__slideInRight">
+                                    <img src="/web_simpasar/static/src/img/pasarlamongan_bgd.jpg" class="img img-fluid img-vismisi mx-auto " alt="" data-shape="web_editor/basic/bsc_square_2" data-original-mimetype="image" data-file-name="s_text_image.svg" data-shape-colors=";;;;" loading="lazy" data-original-id="567" data-original-src="/web/image/567-ed740e32/website.s_text_image_default_image" data-mimetype="image/svg+xml"/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="s_text_image pb32 o_cc o_cc5 pt128 o_colored_level" data-oe-shape-data="{&quot;shape&quot;:&quot;web_editor/Wavy/05&quot;,&quot;flip&quot;:[]}" data-snippet="s_image_text" data-name="Image - Text" style="background-image: none;">
+                        <div class="o_we_shape o_web_editor_Wavy_05"/>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pt16 pb16 o_colored_level animate__animated animate__slideInRight">
+                                    <img src="/web_simpasar/static/src/img/pasarlamongan_bgd.jpg" class="img img-fluid img-vismisi mx-auto" alt="" data-shape="web_editor/basic/bsc_square_3" data-original-mimetype="image/jpeg" data-file-name="s_image_text.svg" data-shape-colors=";;;;" loading="lazy" data-original-id="566" data-original-src="/web/image/566-1020d0f3/website.s_image_text_default_image" data-mimetype="image/svg+xml"/>
+                                </div>
+                                <div class="pt16 pb16 col-lg-5 offset-lg-1 o_colored_level">
+                                    <h2 class="o_default_snippet_text animate__animated animate__slideInLeft">MISI</h2>
+                                    <p><br/></p>
+                                    <p class="o_default_snippet_text">eningkatkan kemampuan pengelolaan pasar.
+										Meningkatkan kontribusi PAD dengan mengoptimalkan sumber-sumber pendapatan pasar.
+										Meningkatkan sarana dan prasarana.
+										Memenuhi Barang dan Jasa yang lengkap, segar murah dan bersaing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+		        </div>
+		    </t>
+	    </template>
+    </data>
+</odoo>

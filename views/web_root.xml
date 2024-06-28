@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="view_blog_post_form" model="ir.ui.view">
+            <field name="name">blog.post.form</field>
+            <field name="model">blog.post</field>
+            <field name="arch" type="xml">
+                <form string="Blog Post">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="subtitle"/>
+                            <field name="content"/>
+                            <field name="description"/>
+                            <field name="image" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_blog_post_tree" model="ir.ui.view">
+            <field name="name">blog.post.tree</field>
+            <field name="model">blog.post</field>
+            <field name="arch" type="xml">
+                <tree string="Blog Post">
+                    <field name="name"/>
+                    <field name="subtitle"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_blog_post" model="ir.actions.act_window">
+            <field name="name">Blog Posts</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">blog.post</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK --> 
+                
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_blog_post" name="Website" sequence="10"/>
+        <menuitem id="website_menu_act" name="Website Settings" parent="menu_blog_post" action="action_blog_post" sequence="20"/>
+    </data>
+</odoo>

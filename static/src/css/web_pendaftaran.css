@@ -1,0 +1,5 @@
+.col-form-label h3 {
+    border-bottom: 2px solid #92D0E7; /* Warna biru laut (#007bff) dan ketebalan garis (2px) dapat disesuaikan */
+    display: inline-block; /* Menjamin garis hanya berada di bawah teks, bukan keseluruhan lebar label */
+    padding-bottom: 5px; /* Jarak antara teks dan garis bawah */
+}
