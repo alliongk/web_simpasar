@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
+       <!-- <record id="home_menu" model="website.menu">
+           <field name="name">home</field>
+           <field name="url">/</field>
+           <field name="parent_id" ref="website.main_menu"/>
+           <field name="sequence" type="int">10</field>
+       </record> -->
+
         <template id="home_template" name="home">
 		    <t t-call="website.layout">
 		        <t t-set="pageName" t-value="'homepage'" />
@@ -177,8 +184,5 @@
 		        </div>
 		    </t>
 		</template>
-
-
-
     </data>
 </odoo>

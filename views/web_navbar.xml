@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template id="cat_website_header" inherit_id="website.layout">
+            <xpath expr="//header[@id='top']" position="replace">
+                <header id="top" data-anchor="true" data-name="Header"
+                    class="o_header_standard o_top_fixed_element">
+                    <nav data-name="Navbar"
+                        class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm">
+
+                        <t t-set="is_connected" t-value="not user_id._is_public()"/>
+                        <div id="top_menu_container"
+                            class="container justify-content-start justify-content-lg-between">
+
+                            <a href="/" class="navbar-brand logo me-5 d-flex align-items-center gap-3">
+                                <span role="img" t-att-title="res_company.partner_id.name">
+                                    <img
+                                        src="/web_simpasar/static/src/img/logo_kablamongan.png"
+                                        class="img img-fluid" width="95" height="40"
+                                        t-att-alt="res_company.name" loading="lazy" style="height: 50px;"/>
+                                </span>
+                            </a>
+
+                            <div id="top_menu_collapse"
+                                class="collapse navbar-collapse order-last order-lg-0">
+                                <ul id="top_menu" class="nav navbar-nav flex-grow-1">
+                                    <li class="nav-item">
+                                        <a role="menuitem" href="/" class="nav-link">
+                                            <span>Beranda</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a role="menuitem" href="/denah" class="nav-link">
+                                            <span>Denah Pasar</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a role="menuitem" href="/pendaftaran" class="nav-link">
+                                            <span>Pendaftaran</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a role="menuitem" href="/blog" class="nav-link">
+                                            <span>Blog</span>
+                                        </a>
+                                    </li>
+                                    <li t-if="is_connected" class="nav-item">
+                                        <a role="menuitem" href="/shop" class="nav-link ">
+                                            <span>Info Komoditas</span>
+                                        </a>
+                                    </li>
+               
+                                </ul>
+                                     <ul id="top_menu" class="nav navbar-nav ms-auto">
+                        <t t-call="portal.placeholder_user_sign_in">
+                            <t t-set="_item_class" t-value="'nav-item'"/>
+                            <t t-set="_link_class" t-value="'nav-link'"/>
+                        </t>
+                        <t t-call="portal.user_dropdown">
+                            <t t-set="_user_name" t-value="true"/>
+                            <t t-set="_item_class" t-value="'nav-item dropdown'"/>
+                            <t t-set="_link_class" t-value="'nav-link'"/>
+                            <t t-set="_dropdown_menu_class" t-value="'dropdown-menu-end'"/>
+                        </t>
+                    </ul> 
+                            </div>
+
+                             
+                            
+                                  <button type="button" t-attf-class="navbar-toggler #{_toggler_class}" data-bs-toggle="collapse" data-bs-target="#top_menu_collapse">
+                                    <span class="navbar-toggler-icon o_not_editable"/>
+                                </button> 
+                        </div>
+                    </nav>
+                </header>
+            </xpath>
+        </template>
+    </data>
+</odoo>

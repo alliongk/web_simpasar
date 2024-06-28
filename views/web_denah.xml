@@ -27,7 +27,10 @@
                                                 </div>
                                             </div>
                                             
+                            
+
                                             <iframe class="s_map_embedded o_not_editable" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=Indonesia&amp;t=m&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed"/><div class="s_map_color_filter"/>
+                                                <t t-esc="denah.name_denah"/>
                                         </div>
                                     </section>
                                 </div>
@@ -44,8 +47,7 @@
                                 <div class="col-lg-6 jumbotron rounded pt32 pb32 o_colored_level" data-name="Box">
                                     <p><br/></p>
                                     <p><br/></p>
-                                    <p><br/></p>
-                                <p><t t-esc="denah.name_denah" /></p>
+                                    <p><br/></p>                                
                                 </div>
                             </div>
                         </div>
