@@ -20,11 +20,12 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'pasar', 'website', 'web', 'website_blog'],
+    'depends': ['base', 'pasar', 'website', 'web', 'website_sale', 'website_blog', 'product'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'data/web_navbar.xml',
         'views/web_home.xml',
         'views/web_pendaftaran.xml',
         'views/web_pembaruan.xml',
@@ -36,6 +37,8 @@
         'views/web_pasarbarulamongan.xml',
         'views/web_blog_page.xml',
         'views/web_root.xml'
+        'views/web_shopdetail.xml',
+        # 'views/web_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

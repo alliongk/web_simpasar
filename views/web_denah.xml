@@ -45,6 +45,7 @@
                                     <p><br/></p>
                                     <p><br/></p>
                                     <p><br/></p>
+                                <p><t t-esc="denah.name_denah" /></p>
                                 </div>
                             </div>
                         </div>
